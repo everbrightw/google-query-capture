@@ -1,28 +1,4 @@
-// chrome.tabs.onUpdated.addListener(
-//     function(tabId, changeInfo, tab) {
-//       // read changeInfo data and do something with it
-//       // like send the new url to contentscripts.js
-//       if (changeInfo.url) {
-//         chrome.tabs.sendMessage( tabId, {
-//           message: 'hello!',
-//           url: changeInfo.url
-          
-//         })
-//       }
-//       console.log(changeInfo.url);
-//     }
-//   );
 
-// chrome.tabs.query({active: true}, function(tab) {
-//         // Do stuff here
-//         console.log(tab.url)
-//         chrome.tabs.sendMessage( tab, {
-//             message: 'hello!',
-//             url: tab.url
-            
-//           })
-        
-//     });
 //Get message from content script
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
